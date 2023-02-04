@@ -1,3 +1,5 @@
+/* all element selectors moved above to group them and partially mimic website order, changed header and h1 to element selectors. rename notes for semantic structure below*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -5,16 +7,10 @@
   color: #ffffff;
 }
 
+/* set font color under universal selector */
+
 body {
   background-color: #d9dcd6;
-}
-
-a {
-  text-decoration: none;
-}
-
-p {
-  font-size: 16px;
 }
 
 header {
@@ -24,10 +20,26 @@ header {
   background-color: #2a607c;
 }
 
-h1 {
-  display: inline-block;
-  font-size: 48px;
+/* changed and consolidated parts of .header to element selector header */
+
+ul {
+  list-style-type: none;
 }
+
+/* changed to element selector */
+
+li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+/* changed to element selector */
+
+a {
+  text-decoration: none;
+}
+
+/* changed to element selector */
 
 nav {
   padding-top: 15px;
@@ -37,47 +49,23 @@ nav {
   font-size: 20px;
 }
 
-ul {
-  list-style-type: none;
-}
+/* changed and consolidated parts of .header to element selector nav */
 
-li {
-  display: inline-block;
-  margin-left: 25px;
-}
-
-.seofont {
-  color: #d9dcd6;
-}
-
-/* a and p element selectors above to group with other element selectors, changed header and h1 to element selectors, changed ul and li to element selectors, changed name of .seo class to .seofont, changed and consolidated parts of .header to element selector nav, set font color under universal selector */
-
-.hero {
-  height: 800px;
-  width: 100%;
-  margin-bottom: 25px;
-  background-image: url("../images/digital-marketing-meeting.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.float-left {
-  float: left;
-  margin-right: 25px;
-}
-
-.float-right {
-  float: right;
-  margin-left: 25px;
-}
-
-.content {
+main {
   width: 75%;
   display: inline-block;
   margin-left: 20px;
 }
 
-.benefits {
+/* changed .content to main,  */
+
+p {
+  font-size: 16px;
+}
+
+/* changed to element selector */
+
+aside {
   margin-right: 20px;
   padding: 20px;
   clear: both;
@@ -88,103 +76,10 @@ li {
   background-color: #2589bd;
 }
 
-.benefit-lead {
-  margin-bottom: 32px;
-}
+/* changed .benefits to aside,  */
 
-.benefit-brand {
-  margin-bottom: 32px;
-}
-
-.benefit-cost {
-  margin-bottom: 32px;
-}
-
-.benefit-lead h3 {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.benefit-brand h3 {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.benefit-cost h3 {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.benefit-lead img {
-  display: block;
-  margin: 10px auto;
-  max-width: 150px;
-}
-
-.benefit-brand img {
-  display: block;
-  margin: 10px auto;
-  max-width: 150px;
-}
-
-.benefit-cost img {
-  display: block;
-  margin: 10px auto;
-  max-width: 150px;
-}
-
-.search-engine-optimization {
-  margin-bottom: 20px;
-  padding: 50px;
-  height: 300px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: #0072bb;
-}
-
-.online-reputation-management {
-  margin-bottom: 20px;
-  padding: 50px;
-  height: 300px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: #0072bb;
-}
-
-.social-media-marketing {
-  margin-bottom: 20px;
-  padding: 50px;
-  height: 300px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: #0072bb;
-}
-
-.search-engine-optimization img {
-  max-height: 200px;
-}
-
-.online-reputation-management img {
-  max-height: 200px;
-}
-
-.social-media-marketing img {
-  max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-  margin-bottom: 20px;
-  font-size: 36px;
-}
-
-.online-reputation-management h2 {
-  margin-bottom: 20px;
-  font-size: 36px;
-}
-
-.social-media-marketing h2 {
-  margin-bottom: 20px;
-  font-size: 36px;
-}
-
-.footer {
+footer {
+  color: black;
   padding: 30px;
   clear: both;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -192,6 +87,81 @@ li {
   text-align: center;
 }
 
-.footer h2 {
+/* changed .footer to footer,  */
+
+.hero {
+  height: 800px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("../images/digital-marketing-meeting.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container-main {
+  margin-bottom: 20px;
+  padding: 50px;
+  height: 300px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #0072bb;
+}
+
+.heading-main {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.float-left-main {
+  float: left;
+  margin-right: 25px;
+  max-height: 200px;
+}
+
+.float-right-main {
+  float: right;
+  margin-left: 25px;
+  max-height: 200px;
+}
+
+/* consolidated .search-engine-optimization, online-reputation management, and .social media marketing to .container, moved img max-height settings to float-right-main and float-left-main class. */
+
+.container-aside {
+  margin-bottom: 32px;
+}
+
+.heading-aside {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.image-aside {
+  display: block;
+  margin: 10px auto;
+  max-width: 150px;
+}
+
+/* consolidated .benefit-lead, .benefit-brand, and .benefit-cost to .container-aside,  heading-aside., and .image-aside */
+
+.heading-footer {
+  color: black;
   font-size: 20px;
 }
+
+/* changed .footer h2 to .closing-footer */
+
+/* grouped class tags to like terms and made clear distinctions where they will fall under html (main, aside, footer), changed order to partially mimic website flow*/
+
+#heading-header {
+  display: inline-block;
+  font-size: 48px;
+}
+
+/* changed .header h1 to an id */
+
+#seofont-header {
+  color: #d9dcd6;
+}
+
+/* changed .header h1 seo to an id */
+
+/* moved elements to the end of code, both are noted so that it is known where they are in html */
